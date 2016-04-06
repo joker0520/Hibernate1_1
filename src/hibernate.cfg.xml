@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <!-- 配置数据库的基本信息  -->
+    <property name="connection.username">root</property>
+    <property name="connection.password">830520</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/hibernate?useSSL=true</property>
+    <!-- 配置hibernate基本信息 -->
+    <!-- hibernate所使用的方言 -->
+   <!-- 
+    <property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+     -->
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <!-- 生成数据表的策略 -->
+    <property name="hbm2ddl.auto">create</property>
+    <property name=""></property>
+    <!--目录结构 -->
+    <mapping resource="com/zxq/News.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
